@@ -1,95 +1,66 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import { Box } from "@mui/material";
+import KeyboardArrowDownRoundedIcon from '@mui/icons-material/KeyboardArrowDownRounded';
 
 export default function Home() {
+  function renderLinkTree() {
+    return (
+      <Box sx={{ display: "flex", flexDirection: "column", justifyContent: "flex-end"}}>
+        <a href="/">Technologies</a>
+        <a href="/">Projects</a>
+        <a href="/">Carreer & Experience</a>
+        <a href="/">About Me</a>
+      </Box>)
+  }
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    <body>
+      <Box
+        className="backgroundImg"
+        sx={{ 
+          height: "100vh", 
+          display: "flex", 
+          justifyContent: "center",
+          backgroundSize: "cover",
+          backgroundPosition: "50% 50%",
+          position: "relative",
+        }}
+      >
+        <Box sx={{
+          position: "absolute", 
+          bottom: "0", 
+          left: "50%", 
+          transform: "translateX(-50%)", 
+          height: "35px", 
+          width: "40px", 
+          backgroundColor: "white", 
+          borderRadius: "20px 20px 0 0",
+          display: "flex",
+          justifyContent: "center",
+        }}>
+          <Box sx={{display: "flex", justifyContent: "center", flexDirection: "column"}}>
+            <KeyboardArrowDownRoundedIcon sx={{ color: "black", height: "35px", width: "35px" }}/>
+          </Box>
+        </Box>
+        <Box sx={{display: "flex", flexDirection: "column", justifyContent: "center"}}>
+          <Box>
+            <Box className="flexCollapse" sx={{display: "flex"}}>
+              <Box sx={{marginRight: "20px"}}>
+                <Box className="mainHeading">
+                  <span className="highlightedText hover-underline-animation">Beautiful UI</span> and <span className="highlightedText hover-underline-animation">functional applications</span> are my passion.
+                </Box>
+              
+                <Box className="subHeading">
+                  <b>Felix Kniest</b> - Full Stack Developer
+                </Box>
+              </Box>
+              <Box className="flexCollapse" sx={{display: "flex", marginTop: "10px"}}>
+                <Box className="responsiveLine" sx={{height: "100%", width: "2px", borderRadius: "1px", backgroundColor: "white", marginRight: "5px"}} />
+                {renderLinkTree()}
+              </Box>
+            </Box>
+          </Box>
+        </Box>
+      </Box>
+      <Box sx={{height: "200px"}}></Box>
+    </body>
   )
 }
