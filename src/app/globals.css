@@ -149,13 +149,13 @@ a:hover {
 }
 
 .backgroundImg {
-  background-image: url("./resources/images/greekbg1.jpg");
+  background-image: url("/greekbg1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .textureImg {
-  background-image: url("./resources/images/filth.jpg");
+  background-image: url("/filth.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -248,7 +248,7 @@ div.hover-underline-animation:hover::after {
 }
 
 .lesserTechBackground {
-  background-image: url("./resources/images/greekbg.jpg");
+  background-image: url("/greekbg.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;

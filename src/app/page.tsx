@@ -8,7 +8,6 @@ import { handleIdScroll } from "./utils/scroll";
 import { ProjectsSection } from "./sections/ProjectsSection";
 import { CareerSection } from "./sections/CareerSection";
 import { AboutMeSection } from "./sections/AboutMeSection";
-import creaProduDecal from "./resources/images/decals/creativityproductivity.png"
 import Image from "next/image";
 
 export default function Home() {
@@ -118,7 +117,7 @@ export default function Home() {
         <Box className="background backgroundImg" />
         <Box className="foreground textureImg" />
         <Box sx={{position: "absolute", top: "4%", left: "0", transform: "translate(-50%,-50%)"}} > 
-           <Image className="rotateDecal" src={creaProduDecal} alt="decal" style={{minWidth: "200px", minHeight: "200px", width: "30vw", height: "30vw"}} />
+           <Image className="rotateDecal" src="/decals/creativityproductivity.png" alt="decal" width={600} height={600} style={{minWidth: "200px", minHeight: "200px", width: "30vw", height: "30vw"}} />
         </Box>
         <Box className="contentHeaderContainer">
           <Box sx={{display: "flex", justifyContent: "center", height: "100%" }}>

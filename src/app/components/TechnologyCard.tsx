@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { Box } from "@mui/material";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 
 interface TechnologyCardProps {
-  image: StaticImageData;
+  image: string;
   title: string;
   text: string;
-  images: StaticImageData[];
+  images: string[];
 }
 
 export const TechnologyCard: React.FC<TechnologyCardProps> = ({image, title, text, images}) => {
@@ -36,7 +36,7 @@ export const TechnologyCard: React.FC<TechnologyCardProps> = ({image, title, tex
 
   return (
     <Box sx={{display: "flex",}} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
-      <Image alt="technology icon" className="techBigIcon" src={image} style={{height: "200px", width: "200px", marginRight: "10px"}} />
+      <Image width={800} height={800} alt="technology icon" className="techBigIcon" src={image} style={{height: "200px", width: "200px", marginRight: "10px"}} />
       <Box sx={{position: "relative", width: "200px", overflow: "hidden", height: "200px"}} >
         <Box sx={{position: "absolute", top: "0", left: "0", display: "flex", flexDirection: "column", justifyContent: "center", height: "100%"}}>
           <h3 style={{marginBottom: "10px", transform: `translateX(${openTitlePos}px)`, transition: "transform .5s ease-in-out"}}>{title}</h3>
@@ -47,7 +47,7 @@ export const TechnologyCard: React.FC<TechnologyCardProps> = ({image, title, tex
             imageKey += 1
             return (
               <Box key={imageKey} sx={{display: "flex", justifyContent: "center", width: "200px"}}>
-                <Image alt="small technology icon" src={image} style={{maxHeight: "50px", maxWidth: "190px", width: "auto", height: "auto", transform:`translateX(${openServicesPos}px)`, transition: "transform .5s ease-in-out, filter .3s linear"}}/>
+                <Image width={400} height={120} alt="small technology icon" src={image} style={{maxHeight: "50px", maxWidth: "190px", width: "auto", height: "auto", transform:`translateX(${openServicesPos}px)`, transition: "transform .5s ease-in-out, filter .3s linear"}}/>
               </Box>
             )
           })}

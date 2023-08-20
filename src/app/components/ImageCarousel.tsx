@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react"
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 
 interface ImageCarouselProps {
-  images: StaticImageData[];
+  images: string[];
 }
 
 export const ImageCarousel: React.FC<ImageCarouselProps> = ({images}) => {
@@ -28,7 +28,7 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({images}) => {
         {images.map(image => {
           imagekey +=1;
           return (
-            <Image key={imagekey} src={image} alt="Project" style={{width: "100%", height: "auto"}} />
+            <Image width={1000} height={600} key={imagekey} src={image} alt="Project" style={{width: "100%", height: "auto"}} />
           )
         })}
       </Box>
