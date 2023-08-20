@@ -22,8 +22,8 @@ export default function Home() {
 
   useEffect(() => {
     document.addEventListener("mousemove", parallax);
-    function parallax(event) {
-      this.querySelectorAll(".mouse").forEach((shift) => {
+    function parallax(this: any, event: MouseEvent) {
+      this.querySelectorAll(".mouse").forEach((shift: any) => {
         const position = shift.getBoundingClientRect();
         const adjustedPos = {
           x: position.x - parseFloat(shift.style.transform.replace("translateX(", "").replace(")", "")) || 0,
@@ -38,8 +38,26 @@ export default function Home() {
       });
     }
     window.addEventListener('scroll', () => {
-      document.body.style.setProperty('--scroll', window.pageYOffset / (document.getElementsByClassName("realBodyHeight")[0].offsetHeight - window.innerHeight));
-      document.querySelectorAll(".mainPageContent").forEach(mainPageContent => {
+      const realBody = document.querySelector(".realBodyHeight")
+      if (realBody && realBody instanceof HTMLElement) {
+        document.body.style.setProperty('--scroll', (window.pageYOffset / (realBody.offsetHeight - window.innerHeight)).toString());
+      }
+      document.querySelectorAll(".mainPageContent").forEach((mainPageContent) => {
+        if (mainPageContent instanceof HTMLElement) {
+          if (window.pageYOffset >= window.innerHeight) {
+            mainPageContent.style.position = "relative"
+          }
+          else { 
+            mainPageContent.style.position = "fixed"
+            mainPageContent.style.top = "0"
+          }
+        }
+      })
+      
+    }, false);
+    // init main content scroll
+    document.querySelectorAll(".mainPageContent").forEach(mainPageContent => {
+      if (mainPageContent instanceof HTMLElement) {
         if (window.pageYOffset >= window.innerHeight) {
           mainPageContent.style.position = "relative"
         }
@@ -47,17 +65,6 @@ export default function Home() {
           mainPageContent.style.position = "fixed"
           mainPageContent.style.top = "0"
         }
-      })
-      
-    }, false);
-    // init main content scroll
-    document.querySelectorAll(".mainPageContent").forEach(mainPageContent => {
-      if (window.pageYOffset >= window.innerHeight) {
-        mainPageContent.style.position = "relative"
-      }
-      else { 
-        mainPageContent.style.position = "fixed"
-        mainPageContent.style.top = "0"
       }
     })
   }, [])

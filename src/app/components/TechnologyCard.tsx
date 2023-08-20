@@ -31,6 +31,8 @@ export const TechnologyCard: React.FC<TechnologyCardProps> = ({image, title, tex
     setOpenTitlePos(defaultOpenTitlePos);
     setOpenServicesPos(defaultOpenServicesPos);
   }
+  
+  let imageKey = 0;
 
   return (
     <Box sx={{display: "flex",}} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
@@ -42,8 +44,9 @@ export const TechnologyCard: React.FC<TechnologyCardProps> = ({image, title, tex
         </Box>
         <Box sx={{position: "absolute", top: "0", left: "0", display: "flex", flexDirection: "column", justifyContent: "center", height: "200px"}}>
           {images?.map(image => {
+            imageKey += 1
             return (
-              <Box key={image} sx={{display: "flex", justifyContent: "center", width: "200px"}}>
+              <Box key={imageKey} sx={{display: "flex", justifyContent: "center", width: "200px"}}>
                 <Image alt="small technology icon" src={image} style={{maxHeight: "50px", maxWidth: "190px", width: "auto", height: "auto", transform:`translateX(${openServicesPos}px)`, transition: "transform .5s ease-in-out, filter .3s linear"}}/>
               </Box>
             )
