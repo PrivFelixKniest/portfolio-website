@@ -1,6 +1,11 @@
 @font-face {
-  font-family: Lexend;
-  src: url(./resources/Lexend-VariableFont_wght.ttf);
+  font-family: "Capuche";
+  src: url("./resources/fonts/Capuche\ Trial.woff");
+}
+
+@font-face {
+  font-family: "Alice";
+  src: url("./resources/fonts/Alice-Regular.woff");
 }
 
 /* width */
@@ -11,19 +16,19 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.1);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background-color: #f2e4ee;
+  background-color: #A48B6F;
   border-radius: 5px;
-  transition: background-color .3s linear;
+  transition: all .3s linear;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #ebd4e4;
+  background-color: #C6BA9C;
 }
 
 * {
@@ -34,18 +39,86 @@
 
 html,
 body {
-  font-family: "Lexend";
   color: white;
-  background-color: rgb(26,0,19);
+  font-family: "Alice";
+  background-color: #131313;
   scroll-behavior:smooth;
+}
+h1, h2, h3, h4 {
+  font-family: "Capuche";
 }
 
 :root {
   cursor: url('./resources/cursor/cursor.png'), auto;
 }
 
+/* Animations on page load*/
+@keyframes pageLoadHeader {
+  0% {
+    transform: translateY(30%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.loadHeaderAnimation {
+  animation: 2s ease-out 1 pageLoadHeader;
+}
+
+@keyframes pageLoadArrow {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.headerArrowBox {
+  animation: 3s ease-out 1 pageLoadArrow;
+}
+
+@keyframes pageLoadNavBar {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.navBar {
+  animation: 3s ease-out 1 pageLoadNavBar;
+}
+
+/*Normal Styles*/
+
+.section {
+  padding-top: 150px;
+  padding-bottom: 100px;
+  overflow-x: hidden;
+}
+
+.alignContent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .contentContainer {
-  max-width: 1250px;
+  width: 1100px;
+  margin: 0 100px;
+  height: 100%;
+}
+
+.contentHeaderContainer {
+  width: 1400px;
   margin: 0 100px;
   height: 100%;
 }
@@ -58,23 +131,53 @@ a {
 }
 
 a:hover {
-  color: rgb(255,200,230)
+  color: #cbdde4
 }
 
 .mainHeading {
-  font-size: 30px;
+  font-family: "Capuche";
+  font-size: 40px;
 }
 
 .subHeading {
-  font-size: 20px;
+  font-size: 21px;
   color: rgba(255,255,255,.7)
 }
 
-.backgroundImg {
-  background-image: url("./resources/images/darkred.png");
-  background-repeat: "no-repeat";
-  background-size: "cover";
+.sectionHeader {
+  overflow: hidden;
 }
+
+.backgroundImg {
+  background-image: url("./resources/images/greekbg1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.textureImg {
+  background-image: url("./resources/images/filth.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.background {
+  transform: translateY(calc(var(--scroll) * 500px));
+}
+
+.foreground {
+  transform: translateY(calc(var(--scroll) * 700px));
+  opacity: 0.2;
+}
+
+.background,
+.foreground {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
 
 .highlightedText {
   color: white;
@@ -82,7 +185,7 @@ a:hover {
 }
 
 .highlightedText:hover {
-  color: rgb(255,200,230)
+  color: #cbdde4
 }
 
 .hover-underline-animation {
@@ -98,7 +201,7 @@ a:hover {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: rgb(255,200,230);
+  background-color: #cbdde4;
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
@@ -106,10 +209,67 @@ a:hover {
 .hover-underline-animation:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
-  background-color: rgb(255,200,230);
+  background-color: #cbdde4;
+}
+
+div.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+div.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  background-color: white;
+}
+
+.rotateDecal {
+  animation: rotateDecal 60s linear infinite;
+  transform: rotate(0deg)
+}
+
+@keyframes rotateDecal {
+  100% {
+    transform: rotate(360deg)
+  }
+}
+
+.projectGridItem {
+  width: 49%;
+  height: auto;
+}
+
+.lesserTechBackground {
+  background-image: url("./resources/images/greekbg.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+img {
+  filter: grayscale(95%);
+  transition: .3s filter linear;
+}
+
+img:hover {
+  filter: grayscale(10%);
+}
+
+.highlightbar {
+  background-color: #333333;
 }
 
 .staticNoiseOverlay {
+  z-index: 2;
   position: fixed;
   top: 0;
   left: 0;
@@ -123,8 +283,17 @@ a:hover {
     repeating-conic-gradient(#000 0 0.0001%,#fff 0 0.0002%) 60% 60%/4500px 4500px;
   background-blend-mode: difference;
   animation: b .2s infinite alternate;
-  opacity: .06;
+  opacity: .04;
 
+}
+
+
+.techBigIcon {
+  transition: transform .5s ease-in-out, filter .3s linear;
+}
+
+.techBigIcon:hover {
+  transform: rotate(3deg);
 }
 
 .highlightWhite {
@@ -133,7 +302,7 @@ a:hover {
 
 .headerLinkListItem {
   display: inline-block;
-  animation: moveright .8s ease-out infinite;
+  animation: moveright .6s ease-out;
   max-width: 180px;
 }
 .headerLinkListItem:hover {
@@ -172,9 +341,14 @@ a:hover {
   100% {background-position: 50% 0, 20% 20%, 60% 50%}
 }
 
+/* Responsive design*/
 @media only screen and (max-width: 900px) {
+
   .flexCollapse {
     flex-direction: column;
+  }
+  .flexCollapseReverse {
+    flex-direction: row;
   }
   .responsiveLine {
     height: 2px;
@@ -184,5 +358,18 @@ a:hover {
     max-width: 1250px;
     margin: 0 50px;
     height: 100%;
+  }
+  .contentHeaderContainer {
+    max-width: 1250px;
+    margin: 0 50px;
+    height: 100%;
+  }
+
+  .mainHeading {
+    font-size: 30px;
+  }
+  .subHeading {
+    font-size: 15px;
+    color: rgba(255,255,255,.7)
   }
 }

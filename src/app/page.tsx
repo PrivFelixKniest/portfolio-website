@@ -3,12 +3,18 @@
 import { Box } from "@mui/material";
 import KeyboardArrowDownRoundedIcon from '@mui/icons-material/KeyboardArrowDownRounded';
 import { useEffect, useState } from "react";
-
+import { TechnologiesSection } from "./sections/TechnologiesSection";
+import { handleIdScroll } from "./utils/scroll";
+import { ProjectsSection } from "./sections/ProjectsSection";
+import { CareerSection } from "./sections/CareerSection";
+import { AboutMeSection } from "./sections/AboutMeSection";
+import creaProduDecal from "./resources/images/decals/creativityproductivity.png"
+import Image from "next/image";
 
 export default function Home() {
-  const defaultNameDoubleOffset = -20;
+  const defaultNameDoubleOffset = -15;
   const activeNameDoubleOffset = -10;
-  const secondDefaultNameDoubleOffset = -40;
+  const secondDefaultNameDoubleOffset = -35;
   const secondActiveNameDoubleOffset = -15;
   const [nameDoubleOffset, setNameDoubleOffset] = useState(defaultNameDoubleOffset);
   const [secondNameDoubleOffset, setSecondNameDoubleOffset] = useState(secondDefaultNameDoubleOffset);
@@ -32,9 +38,28 @@ export default function Home() {
       });
     }
     window.addEventListener('scroll', () => {
-      document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
-      console.log(document.body.style.cssText)
+      document.body.style.setProperty('--scroll', window.pageYOffset / (document.getElementsByClassName("realBodyHeight")[0].offsetHeight - window.innerHeight));
+      document.querySelectorAll(".mainPageContent").forEach(mainPageContent => {
+        if (window.pageYOffset >= window.innerHeight) {
+          mainPageContent.style.position = "relative"
+        }
+        else { 
+          mainPageContent.style.position = "fixed"
+          mainPageContent.style.top = "0"
+        }
+      })
+      
     }, false);
+    // init main content scroll
+    document.querySelectorAll(".mainPageContent").forEach(mainPageContent => {
+      if (window.pageYOffset >= window.innerHeight) {
+        mainPageContent.style.position = "relative"
+      }
+      else { 
+        mainPageContent.style.position = "fixed"
+        mainPageContent.style.top = "0"
+      }
+    })
   }, [])
 
   const handleMouseEnterName = () => {
@@ -51,17 +76,28 @@ export default function Home() {
   function renderLinkTree() {
     return (
       <Box sx={{ display: "flex", flexDirection: "column", justifyContent: "center"}}>
-        <a href="/" className="headerLinkListItem" id="item1">Technologies</a>
-        <a href="/" className="headerLinkListItem" id="item2">Projects</a>
-        <a href="/" className="headerLinkListItem" id="item3">Carreer & Experience</a>
-        <a href="/" className="headerLinkListItem" id="item4">About Me</a>
+        <a onClick={e => handleIdScroll("technologies")} className="headerLinkListItem" id="item1">Technologies</a>
+        <a onClick={e => handleIdScroll("projects")} className="headerLinkListItem" id="item2">Projects</a>
+        <a onClick={e => handleIdScroll("career")} className="headerLinkListItem" id="item3">Carreer & Experience</a>
+        <a onClick={e => handleIdScroll("aboutme")} className="headerLinkListItem" id="item4">About Me</a>
       </Box>)
   }
 
-  return (
-    <Box>
+  const renderPageContent = () => {
+    return (
+      <>
+        {/*<TechnologiesSection />*/}
+        <ProjectsSection />
+        <CareerSection />
+        <AboutMeSection />
+      </>
+    )
+  }
+
+  const renderHeader = () => {
+    return (
       <Box
-        className="backgroundImg sectionHeader"
+        className="sectionHeader"
         sx={{ 
           height: "100vh",
           backgroundSize: "cover",
@@ -72,27 +108,37 @@ export default function Home() {
           zIndex: 1
         }}
       >
-        <Box className="contentContainer">
-          <Box sx={{display: "flex", justifyContent: "center", height: "100%"}}>
+        <Box className="background backgroundImg" />
+        <Box className="foreground textureImg" />
+        <Box sx={{position: "absolute", top: "4%", left: "0", transform: "translate(-50%,-50%)"}} > 
+           <Image className="rotateDecal" src={creaProduDecal} alt="decal" style={{minWidth: "200px", minHeight: "200px", width: "30vw", height: "30vw"}} />
+        </Box>
+        <Box className="contentHeaderContainer">
+          <Box sx={{display: "flex", justifyContent: "center", height: "100%" }}>
             <Box sx={{
               position: "absolute", 
               bottom: "0", 
               left: "50%", 
               transform: "translateX(-50%)", 
-              height: "35px", 
-              width: "40px", 
-              border: "solid 2px white",
-              borderBottom: "none",
-              borderRadius: "20px 20px 3px 3px",
-              display: "flex",
-              justifyContent: "center",
+              overflow: "hidden",
             }}>
-              <Box sx={{ display: "flex", justifyContent: "center", flexDirection: "column"}}>
-                <a href="#section1"><KeyboardArrowDownRoundedIcon className="highlightedText" sx={{ color: "white", height: "35px", width: "35px", transform: `translateY(3px)`}}/></a>
+                <Box className="headerArrowBox" sx={{
+                height: "35px", 
+                width: "40px", 
+                border: "solid 2px white",
+                borderBottom: "none",
+                borderRadius: "20px 20px 3px 3px",
+                display: "flex",
+                justifyContent: "center",
+              }}>
+                <Box sx={{ display: "flex", justifyContent: "center", flexDirection: "column"}}>
+                  <a onClick={() => handleIdScroll("technologies")}><KeyboardArrowDownRoundedIcon className="highlightedText" sx={{ color: "white", height: "35px", width: "35px", transform: `translateY(3px)`}}/></a>
+                </Box>
               </Box>
             </Box>
+            
             <Box sx={{height: "100%", display: "flex", flexDirection: "column", justifyContent: "center"}}>
-              <Box>
+              <Box className="loadHeaderAnimation" >
                 <Box className="flexCollapse mouse" sx={{display: "flex"}}>
                   <Box sx={{marginRight: "20px"}}>
                     <Box className="mainHeading">
@@ -135,8 +181,18 @@ export default function Home() {
           </Box>
         </Box>
       </Box>
-      <Box id="section1" sx={{height: "1600px",}}>
-        <Box className="contentContainer" />
+    )
+  }
+
+  return (
+    <Box>
+      {renderHeader()}
+      <Box className="mainPageContent" sx={{width: "100%"}}>
+        {renderPageContent()}
+      </Box>
+      <Box className="realBodyHeight" sx={{visibility: "hidden", pointerEvents: "none", position: "absolute", top: "0", width: "100%", overflowX: "hidden"}}>
+        {renderHeader()}
+        {renderPageContent()}
       </Box>
     </Box>
   )
