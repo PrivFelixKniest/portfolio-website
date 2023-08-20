@@ -44,7 +44,7 @@ export const ProjectsSection: React.FC<any> = () => {
               </a>
             </Box>
             <Box className="projectGridItem" sx={{display: "flex", flexDirection: "column", justifyContent: "center"}}>
-              <h2 style={{marginBottom: "10px"}}>scanrecs' website and artist dashboard</h2>
+              <h2 style={{marginBottom: "10px"}}>scanrecs' Website and Artist Dashboard</h2>
               <p style={{marginBottom: "10px"}}>This project for Scan Records, an international underground record label for electronic music, contained a homepage, a webstore using payhip.com and an artist dashboard, which collects, aggregates and displays
               key insights into an artists performance.</p>
               <Box sx={{display: "flex", justifyContent: "flex-start", height: "30px"}}>
