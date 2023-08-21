@@ -29,7 +29,7 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({images, isModal}) =
       <Modal open={openPopupCarousel} onClose={() => setOpenPopupCarousel(false)}>
         <Box sx={{ display: "flex", justifyContent: "center", height: "100%", pointerEvents: "none"}}>
           <Box sx={{ display: "flex", justifyContent: "center", flexDirection: "column", pointerEvents: "none"}}>
-            <Box sx={{width: "1000px", height: "auto", pointerEvents:"all"}}>
+            <Box sx={{width: "90vw", maxWidth: "1000px", height: "auto", pointerEvents:"all"}}>
               <ImageCarousel images={images} isModal />
             </Box>
           </Box>
