@@ -15,9 +15,7 @@ export const ProjectsSection: React.FC<any> = () => {
           <h1 style={{marginBottom: "30px"}}>Projects</h1>
           <Box className="flexCollapse" sx={{display: "flex", width: "100%", justifyContent: "space-between", marginBottom: "30px"}}>
             <Box className="projectGridItem">
-              <a href="https://scanrecs.com" target="_blank" rel="no-referrer">
-                <ImageCarousel images={["/projects/scanrecs/3.jpg","/projects/scanrecs/4.jpg","/projects/scanrecs/1.jpg", "/projects/scanrecs/2.jpg"]} />
-              </a>
+              <ImageCarousel images={["/projects/scanrecs/3.jpg","/projects/scanrecs/4.jpg","/projects/scanrecs/scanrecsToDash.gif","/projects/scanrecs/1.jpg", "/projects/scanrecs/2.jpg","/projects/scanrecs/scanrecsAddNew.gif"]} />
             </Box>
             <Box className="projectGridItem" sx={{display: "flex", flexDirection: "column", justifyContent: "center"}}>
               <h2 style={{marginBottom: "10px"}}>scanrecs&apos; Website and Artist Dashboard</h2>
@@ -26,13 +24,13 @@ export const ProjectsSection: React.FC<any> = () => {
               <Box sx={{display: "flex", justifyContent: "flex-start", height: smallIconsHeight}}>
                 <Image width={100} height={100} src="/techIcons/firebase.png" alt="firebase" style={{maxHeight: "100%", maxWidth: "100px", height: "auto", width: "auto", marginRight: "5px"}} />
                 <Image width={100} height={100} src="/techIcons/express.png" alt="express.js" style={{maxHeight: "100%", maxWidth: "100px", height: "auto", width: "auto", marginRight: "10px", marginLeft: "5px"}} />
-                <Box sx={{height: "100%", width: "1px", backgroundColor: "white", borderRadius: "2px", marginRight: "5px"}} />
+                <Box sx={{height: "100%", width: "2px", backgroundColor: "white", borderRadius: "2px", marginRight: "5px"}} />
                 <Image width={100} height={100} src="/techIcons/pngwing.png" alt="react.js" style={{maxHeight: "100%", maxWidth: "100px", height: "auto", width: "auto", marginRight: "5px"}} />
                 <Image width={100} height={100} src="/techIcons/mui.png" alt="Material ui" style={{maxHeight: "100%", maxWidth: "100px", height: "auto", width: "auto", marginRight: "5px"}} />
                 <Image width={100} height={100} src="/techIcons/vercel.png" alt="vercel" style={{maxHeight: "100%", maxWidth: "100px", height: "auto", width: "auto", marginRight: "5px"}} />
               </Box>
               {/** Links */}
-              <Box sx={{display: "flex", justifyContent: "flex-start", fontStyle: "italic", margin: "30px 0 15px"}}>
+              <Box sx={{display: "flex", justifyContent: "flex-start", fontStyle: "italic", margin: "30px 0 0px"}}>
                 <h3 style={{marginRight: "10px"}}>Links:</h3>
                 <a href="https://scanrecs.com" style={{marginRight: "10px"}} target="_blank" rel="no-referrer">scanrecs.com</a>
               </Box>
@@ -52,7 +50,7 @@ export const ProjectsSection: React.FC<any> = () => {
                 <Image width={100} height={100} src="/techIcons/pandas.png" alt="pandas" style={{maxHeight: "100%", maxWidth: "100px", height: "auto", width: "auto", marginRight: "5px"}} />
               </Box>
               {/** Links */}
-              <Box sx={{display: "flex", justifyContent: "flex-start", fontStyle: "italic", margin: "30px 0 15px"}}>
+              <Box sx={{display: "flex", justifyContent: "flex-start", fontStyle: "italic", margin: "30px 0 0px"}}>
                 <h3 style={{marginRight: "10px"}}>Links:</h3>
                 <a href="https://github.com/PrivFelixKniest/covid-death-prediction/tree/master" style={{marginRight: "10px"}} target="_blank" rel="no-referrer">Github</a>
                 <a href="https://www.kaggle.com/competitions/Covid19-Death-Predictions/overview" style={{marginRight: "10px"}} target="_blank" rel="no-referrer">Kaggle</a>
@@ -60,34 +58,28 @@ export const ProjectsSection: React.FC<any> = () => {
               </Box>
             </Box>
             <Box className="projectGridItem" >
-              <a href="https://www.kaggle.com/competitions/Covid19-Death-Predictions/overview" target="_blank" rel="no-referrer">
-                <ImageCarousel images={["/projects/coronadeaths/1.jpg","/projects/coronadeaths/2.jpg"]} />
-              </a>
+              <ImageCarousel images={["/projects/coronadeaths/1.jpg","/projects/coronadeaths/2.jpg","/projects/coronadeaths/3.jpg"]} />
             </Box>
           </Box>
           <Box className="flexCollapse" sx={{display: "flex", width: "100%", justifyContent: "space-between", marginTop: "30px"}}>
             <Box className="projectGridItem">
-              <a href="https://scanrecs.com" target="_blank" rel="no-referrer">
-                <ImageCarousel images={["/projects/scanrecs/3.jpg","/projects/scanrecs/4.jpg","/projects/scanrecs/1.jpg", "/projects/scanrecs/2.jpg"]} />
-              </a>
+              <ImageCarousel images={["/projects/swiping-header/TrafficJamExample.gif","/projects/swiping-header/npm.jpg"]} />
             </Box>
             <Box className="projectGridItem" sx={{display: "flex", flexDirection: "column", justifyContent: "center"}}>
-              <h2 style={{marginBottom: "10px"}}>Project Three</h2>
-              <p style={{marginBottom: "10px"}}>This is another project that has been butifully executed and is completely done...</p>
+              <h2 style={{marginBottom: "10px"}}>&quot;swiping-header&quot; npm Package</h2>
+              <p style={{marginBottom: "10px"}}>This npm package provides a super easy to use API to integrate a &quot;Swipe Up&quot; header, as it is found in this protfolio, within their own React.js application!</p>
               <Box sx={{display: "flex", justifyContent: "flex-start", height: smallIconsHeight}}>
-                <Image width={100} height={100} src="/techIcons/firebase.png" alt="firebase" style={{maxHeight: "100%", maxWidth: "100px", height: "auto", width: "auto", marginRight: "5px"}} />
-                <Image width={100} height={100} src="/techIcons/express.png" alt="express.js" style={{maxHeight: "100%", maxWidth: "100px", height: "auto", width: "auto", marginRight: "10px", marginLeft: "5px"}} />
-                <Box sx={{height: "100%", width: "1px", backgroundColor: "white", borderRadius: "2px", marginRight: "5px"}} />
+                <Image width={100} height={100} src="/techIcons/npm.png" alt="firebase" style={{maxHeight: "100%", maxWidth: "100px", height: "auto", width: "auto", marginRight: "5px"}} />
+                <Image width={100} height={100} src="/techIcons/rollup.png" alt="react.js" style={{maxHeight: "100%", maxWidth: "100px", height: "auto", width: "auto", marginRight: "5px"}} />
+                <Box sx={{height: "100%", width: "2px", backgroundColor: "white", borderRadius: "2px", marginRight: "5px"}} />
+                <Image width={100} height={100} src="/techIcons/storybook.png" alt="react.js" style={{maxHeight: "100%", maxWidth: "100px", height: "auto", width: "auto", marginRight: "5px"}} />
                 <Image width={100} height={100} src="/techIcons/pngwing.png" alt="react.js" style={{maxHeight: "100%", maxWidth: "100px", height: "auto", width: "auto", marginRight: "5px"}} />
-                <Image width={100} height={100} src="/techIcons/mui.png" alt="react.js" style={{maxHeight: "100%", maxWidth: "100px", height: "auto", width: "auto", marginRight: "5px"}} />
-                <Image width={100} height={100} src="/techIcons/vercel.png" alt="vercel" style={{maxHeight: "100%", maxWidth: "100px", height: "auto", width: "auto", marginRight: "5px"}} />
               </Box>
               {/** Links */}
-              <Box sx={{display: "flex", justifyContent: "flex-start", fontStyle: "italic", margin: "30px 0 15px"}}>
+              <Box sx={{display: "flex", justifyContent: "flex-start", fontStyle: "italic", margin: "30px 0 0"}}>
                 <h3 style={{marginRight: "10px"}}>Links:</h3>
-                <a href="https://github.com/PrivFelixKniest/covid-death-prediction/tree/master" style={{marginRight: "10px"}} target="_blank" rel="no-referrer">Github</a>
-                <a href="https://www.kaggle.com/competitions/Covid19-Death-Predictions/overview" style={{marginRight: "10px"}} target="_blank" rel="no-referrer">Kaggle</a>
-                <a href="https://www.kaggle.com/competitions/Covid19-Death-Predictions/leaderboard" style={{marginRight: "10px"}} target="_blank" rel="no-referrer">Leaderboard</a>
+                <a href="https://github.com/PrivFelixKniest/swiping-header" style={{marginRight: "10px"}} target="_blank" rel="no-referrer">Github</a>
+                <a href="https://www.npmjs.com/package/swiping-header?activeTab=readme" style={{marginRight: "10px"}} target="_blank" rel="no-referrer">npm</a>
               </Box>
             </Box>
           </Box>
