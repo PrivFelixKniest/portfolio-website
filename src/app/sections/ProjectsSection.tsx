@@ -2,6 +2,7 @@ import React from "react"
 import { Box } from "@mui/material";
 import Image from "next/image";
 import {ImageCarousel} from "../components/ImageCarousel"
+import { H1Header } from "../components/H1Header";
 
 
 
@@ -9,15 +10,20 @@ export const ProjectsSection: React.FC<any> = () => {
 
   const smallIconsHeight = "35px"
   return (
-    <Box id="projects" className="section">
+    <Box id="projects" className="section" >
       <Box className="alignContent">
-        <Box className="contentContainer">
-          <h1 style={{marginBottom: "30px"}}>Projects</h1>
+        <Box className="contentContainer" >
+          <Box sx={{position: "absolute", top: "230px", right: "0", overflow: "hidden"}}>
+            <Box sx={{transform: "translateX(60%)"}}>
+              <Image width={600} height={600} src="/decals/creativityproductivityLarge.png" alt="decal" className="rotateDecal" style={{width: "200px", height: "200px"}} />
+            </Box>
+          </Box>
+          <H1Header title="Projects" />
           <Box className="flexCollapse" sx={{display: "flex", width: "100%", justifyContent: "space-between", marginBottom: "30px"}}>
-            <Box className="projectGridItem">
+            <Box className="gridItem">
               <ImageCarousel images={["/projects/scanrecs/3.jpg","/projects/scanrecs/4.jpg","/projects/scanrecs/scanrecsToDash.gif","/projects/scanrecs/1.jpg", "/projects/scanrecs/2.jpg","/projects/scanrecs/scanrecsAddNew.gif"]} />
             </Box>
-            <Box className="projectGridItem" sx={{display: "flex", flexDirection: "column", justifyContent: "center"}}>
+            <Box className="gridItem" sx={{display: "flex", flexDirection: "column", justifyContent: "center"}}>
               <h2 style={{marginBottom: "10px"}}>scanrecs&apos; Website and Artist Dashboard</h2>
               <p style={{marginBottom: "10px"}}>This project for Scan Records, an international underground record label for electronic music, contained a homepage, a webstore using payhip.com and an artist dashboard, which collects, aggregates and displays
               key insights into an artists performance.</p>
@@ -37,7 +43,7 @@ export const ProjectsSection: React.FC<any> = () => {
             </Box>
           </Box>
           <Box className="flexCollapseReverse" sx={{display: "flex", width: "100%", justifyContent: "space-between", marginBottom: "30px"}}>
-            <Box className="projectGridItem" sx={{display: "flex", flexDirection: "column", justifyContent: "center"}}>
+            <Box className="gridItem" sx={{display: "flex", flexDirection: "column", justifyContent: "center"}}>
               {/** Text */}
               <h2 style={{marginBottom: "10px"}}>Predict Covid Deaths ML Algorithm</h2>
               <p style={{marginBottom: "10px"}}>This project is a machine learning algorithm for predicting corona death numbers for a given week based on an infection data set (Kaggle competition). 
@@ -57,15 +63,15 @@ export const ProjectsSection: React.FC<any> = () => {
                 <a href="https://www.kaggle.com/competitions/Covid19-Death-Predictions/leaderboard" style={{marginRight: "10px"}} target="_blank" rel="no-referrer">Leaderboard</a>
               </Box>
             </Box>
-            <Box className="projectGridItem" >
+            <Box className="gridItem">
               <ImageCarousel images={["/projects/coronadeaths/1.jpg","/projects/coronadeaths/2.jpg","/projects/coronadeaths/3.jpg"]} />
             </Box>
           </Box>
           <Box className="flexCollapse" sx={{display: "flex", width: "100%", justifyContent: "space-between", marginTop: "30px"}}>
-            <Box className="projectGridItem">
+            <Box className="gridItem">
               <ImageCarousel images={["/projects/swiping-header/TrafficJamExample.gif","/projects/swiping-header/npm.jpg"]} />
             </Box>
-            <Box className="projectGridItem" sx={{display: "flex", flexDirection: "column", justifyContent: "center"}}>
+            <Box className="gridItem" sx={{display: "flex", flexDirection: "column", justifyContent: "center"}}>
               <h2 style={{marginBottom: "10px"}}>&quot;swiping-header&quot; npm Package</h2>
               <p style={{marginBottom: "10px"}}>This npm package provides a super easy to use API to integrate a &quot;Swipe Up&quot; header, as it is found in this protfolio, within their own React.js application!</p>
               <Box sx={{display: "flex", justifyContent: "flex-start", height: smallIconsHeight}}>
@@ -82,6 +88,9 @@ export const ProjectsSection: React.FC<any> = () => {
                 <a href="https://www.npmjs.com/package/swiping-header?activeTab=readme" style={{marginRight: "10px"}} target="_blank" rel="no-referrer">npm</a>
               </Box>
             </Box>
+          </Box>
+          <Box sx={{textAlign: "center", marginTop: "30px"}}>
+            <p><i>And many more...</i></p>
           </Box>
         </Box>
       </Box>

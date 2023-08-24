@@ -4,6 +4,7 @@ import React, { useState } from "react"
 import { Box } from "@mui/material";
 import { TechnologyCard } from "../components/TechnologyCard";
 import Image, { StaticImageData } from "next/image";
+import { H1Header } from "../components/H1Header";
 
 export const TechnologiesSection: React.FC<any> = () => {
 
@@ -32,7 +33,7 @@ export const TechnologiesSection: React.FC<any> = () => {
     <Box id="technologies" className="section">
       <Box className="alignContent">
         <Box className="contentContainer">
-          <h1>Technologies</h1>
+          <H1Header title="Technologies" />
           <p style={{marginBottom: "30px"}}>The Technologies I use frequently.</p>
           <Box className="flexCollapse" sx={{display: "flex", justifyContent: "center"}}>
             <TechnologyCard 

@@ -99,7 +99,7 @@ h1, h2, h3, h4 {
 /*Normal Styles*/
 
 .section {
-  padding-top: 150px;
+  padding-top: 50px;
   padding-bottom: 100px;
   overflow-x: hidden;
 }
@@ -136,6 +136,21 @@ a {
 
 a:hover {
   color: #cbdde4
+}
+
+.h1HeaderLine {
+  animation: h1LineSlideOut .6s linear infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll)*-1s);
+}
+
+@keyframes h1LineSlideOut {
+  from {
+    transform: translateX(-100%)
+  }
+  to {
+    transform: translateX(200%)
+  }
 }
 
 .mainHeading {
@@ -246,7 +261,7 @@ div.hover-underline-animation:hover::after {
   }
 }
 
-.projectGridItem {
+.gridItem {
   width: 49%;
   height: auto;
 }
@@ -381,7 +396,7 @@ img:hover {
     flex-direction: column-reverse;
   }
 
-  .projectGridItem {
+  .gridItem {
     width: 100%;
     margin-bottom: 20px;
   }
