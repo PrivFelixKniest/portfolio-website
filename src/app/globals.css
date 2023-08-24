@@ -376,4 +376,13 @@ img:hover {
     font-size: 15px;
     color: rgba(255,255,255,.7)
   }
+
+  .flexCollapseReverse {
+    flex-direction: column-reverse;
+  }
+
+  .projectGridItem {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }

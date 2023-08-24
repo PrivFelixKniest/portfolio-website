@@ -36,7 +36,7 @@ export const ProjectsSection: React.FC<any> = () => {
               </Box>
             </Box>
           </Box>
-          <Box className="flexCollapse" sx={{display: "flex", width: "100%", justifyContent: "space-between", marginBottom: "30px"}}>
+          <Box className="flexCollapseReverse" sx={{display: "flex", width: "100%", justifyContent: "space-between", marginBottom: "30px"}}>
             <Box className="projectGridItem" sx={{display: "flex", flexDirection: "column", justifyContent: "center"}}>
               {/** Text */}
               <h2 style={{marginBottom: "10px"}}>Predict Covid Deaths ML Algorithm</h2>
