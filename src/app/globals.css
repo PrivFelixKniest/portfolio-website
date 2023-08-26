@@ -48,6 +48,10 @@ h1, h2, h3, h4 {
   font-family: "Capuche";
 }
 
+li {
+  margin-bottom: 4px;
+}
+
 :root {
   cursor: url('./resources/cursor/cursor.png'), auto;
 }

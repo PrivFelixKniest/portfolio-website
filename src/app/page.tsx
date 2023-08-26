@@ -82,7 +82,6 @@ export default function Home() {
   function renderLinkTree() {
     return (
       <Box sx={{ display: "flex", flexDirection: "column", justifyContent: "center"}}>
-        <a onClick={e => handleIdScroll("technologies")} className="headerLinkListItem" id="item1">Technologies</a>
         <a onClick={e => handleIdScroll("projects")} className="headerLinkListItem" id="item2">Projects</a>
         <a onClick={e => handleIdScroll("career")} className="headerLinkListItem" id="item3">Carreer & Experience</a>
         <a onClick={e => handleIdScroll("aboutme")} className="headerLinkListItem" id="item4">About Me</a>
@@ -92,7 +91,6 @@ export default function Home() {
   const renderPageContent = () => {
     return (
       <>
-        {/*<TechnologiesSection />*/}
         <ProjectsSection />
         <CareerSection />
         <AboutMeSection />
@@ -138,7 +136,7 @@ export default function Home() {
                 justifyContent: "center",
               }}>
                 <Box sx={{ display: "flex", justifyContent: "center", flexDirection: "column"}}>
-                  <a onClick={() => handleIdScroll("technologies")}><KeyboardArrowDownRoundedIcon className="highlightedText" sx={{ color: "white", height: "35px", width: "35px", transform: `translateY(3px)`}}/></a>
+                  <a onClick={() => handleIdScroll("projects")}><KeyboardArrowDownRoundedIcon className="highlightedText" sx={{ color: "white", height: "35px", width: "35px", transform: `translateY(3px)`}}/></a>
                 </Box>
               </Box>
             </Box>
