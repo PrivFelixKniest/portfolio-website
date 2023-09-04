@@ -346,15 +346,15 @@ img:hover {
 }
 .headerLinkListItem#item2 {
   animation-play-state: paused;
-  animation-delay: calc(calc(var(--scroll) - .1) * -1s);
+  animation-delay: calc(calc(var(--scroll) - .0) * -1s);
 }
 .headerLinkListItem#item3 {
   animation-play-state: paused;
-  animation-delay: calc(calc(var(--scroll) - .2) * -1s);
+  animation-delay: calc(calc(var(--scroll) - .1) * -1s);
 }
 .headerLinkListItem#item4 {
   animation-play-state: paused;
-  animation-delay: calc(calc(var(--scroll) - .3) * -1s);
+  animation-delay: calc(calc(var(--scroll) - .2) * -1s);
 }
 
 @keyframes moveright {

@@ -37,7 +37,7 @@ export const ProjectsSection: React.FC<any> = () => {
               </Box>
               {/** Links */}
               <Box sx={{display: "flex", justifyContent: "flex-start", fontStyle: "italic", margin: "30px 0 0px"}}>
-                <h3 style={{marginRight: "10px"}}>Links:</h3>
+                <h3 style={{marginRight: "10px"}}>Visit Project:</h3>
                 <a href="https://scanrecs.com" style={{marginRight: "10px"}} target="_blank" rel="no-referrer">scanrecs.com</a>
               </Box>
             </Box>
@@ -57,7 +57,7 @@ export const ProjectsSection: React.FC<any> = () => {
               </Box>
               {/** Links */}
               <Box sx={{display: "flex", justifyContent: "flex-start", fontStyle: "italic", margin: "30px 0 0px"}}>
-                <h3 style={{marginRight: "10px"}}>Links:</h3>
+                <h3 style={{marginRight: "10px"}}>Visit Project:</h3>
                 <a href="https://github.com/PrivFelixKniest/covid-death-prediction/tree/master" style={{marginRight: "10px"}} target="_blank" rel="no-referrer">Github</a>
                 <a href="https://www.kaggle.com/competitions/Covid19-Death-Predictions/overview" style={{marginRight: "10px"}} target="_blank" rel="no-referrer">Kaggle</a>
                 <a href="https://www.kaggle.com/competitions/Covid19-Death-Predictions/leaderboard" style={{marginRight: "10px"}} target="_blank" rel="no-referrer">Leaderboard</a>
@@ -83,7 +83,7 @@ export const ProjectsSection: React.FC<any> = () => {
               </Box>
               {/** Links */}
               <Box sx={{display: "flex", justifyContent: "flex-start", fontStyle: "italic", margin: "30px 0 0"}}>
-                <h3 style={{marginRight: "10px"}}>Links:</h3>
+                <h3 style={{marginRight: "10px"}}>Visit Project:</h3>
                 <a href="https://github.com/PrivFelixKniest/swiping-header" style={{marginRight: "10px"}} target="_blank" rel="no-referrer">Github</a>
                 <a href="https://www.npmjs.com/package/swiping-header?activeTab=readme" style={{marginRight: "10px"}} target="_blank" rel="no-referrer">npm</a>
               </Box>
