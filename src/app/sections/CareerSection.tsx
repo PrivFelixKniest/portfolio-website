@@ -38,7 +38,7 @@ export const CareerSection: React.FC<any> = () => {
                   {renderCareerPoint("Full Stack Developer | 2022-2025", "creditshelf AG")}
                   <Box sx={{ height: `${(careerPoint)*carrerPointSpacer-carrerPointSpacer*0.61}px`, width: "3px", borderRadius: "2px", backgroundColor: "#C6BA9C", margin: "0 10px"}} />
                 </Box>
-                <h2 style={{marginBottom: "10px"}}>Other Technologies</h2>
+                <h2 style={{marginBottom: "10px"}}>Technologies I have used</h2>
                 <ul style={{marginLeft: "20px"}}>
                   <li><b>AWS: </b>ECR Repositories, RDS Databases, EC2 Deployment, SSM Environment management</li>
                   <li><b>Data Bases: </b>MySQL, PostgreSQL, Firestore (NoSQL)</li>

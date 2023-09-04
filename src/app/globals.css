@@ -37,6 +37,10 @@
   margin: 0;
 }
 
+.dot {
+  cursor: url('./resources/cursor/click.png') 3 3, auto !important;
+}
+
 html,
 body {
   color: white;
