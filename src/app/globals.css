@@ -314,6 +314,9 @@ img:hover {
 
 }
 
+.careerPadding {
+  padding-right: 30px;
+}
 
 .techBigIcon {
   transition: transform .5s ease-in-out, filter .3s linear;
@@ -407,5 +410,17 @@ img:hover {
   .gridItem {
     width: 100%;
     margin-bottom: 20px;
+  }
+
+  .careerPadding {
+    padding-right: 0px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .technologyCardCollapse {
+    flex-direction: column;
+    margin-left: 5vw;
+    margin-right: 5vw;
   }
 }

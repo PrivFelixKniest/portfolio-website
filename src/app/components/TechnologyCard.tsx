@@ -35,7 +35,7 @@ export const TechnologyCard: React.FC<TechnologyCardProps> = ({image, title, tex
   let imageKey = 0;
 
   return (
-    <Box sx={{display: "flex",}} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
+    <Box className="technologyCardCollapse" sx={{display: "flex"}} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
       <Image width={800} height={800} alt="technology icon" className="techBigIcon" src={image} style={{height: "200px", width: "200px", marginRight: "10px"}} />
       <Box sx={{position: "relative", width: "200px", overflow: "hidden", height: "200px"}} >
         <Box sx={{position: "absolute", top: "0", left: "0", display: "flex", flexDirection: "column", justifyContent: "center", height: "100%"}}>

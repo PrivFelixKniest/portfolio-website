@@ -26,7 +26,9 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({images, isModal}) =
         </Box>
       </Modal>
       <IconButton onClick={() => !isModal ? setOpenPopupCarousel(true) : null} sx={{border: "none", backgroundColor: "transparent", padding: "0", position: "absolute", top: "3px", left: "3px", display: isModal ? "none" : "block", zIndex: 3}}>
-        <FullscreenRoundedIcon color="inherit" sx={{color: "#C6BA9C"}} />
+        <Box sx={{display: "flex", flexDirection: "column", justifyContent: "center"}}>
+          <FullscreenRoundedIcon color="inherit" sx={{color: "#C6BA9C", margin: "3px"}} />
+        </Box>
       </IconButton>
       <Carousel>
         {images.map(image => {

@@ -73,7 +73,7 @@ export const ProjectsSection: React.FC<any> = () => {
             </Box>
             <Box className="gridItem" sx={{display: "flex", flexDirection: "column", justifyContent: "center"}}>
               <h2 style={{marginBottom: "10px"}}>&quot;swiping-header&quot; npm Package</h2>
-              <p style={{marginBottom: "10px"}}>This npm package provides a super easy to use API to integrate a &quot;Swipe Up&quot; header, as it is found in this protfolio, within their own React.js application!</p>
+              <p style={{marginBottom: "10px"}}>This npm package provides an easy to use API to integrate a &quot;Swipe Up&quot; header, as it can be found on this website, within your own React.js application.</p>
               <Box sx={{display: "flex", justifyContent: "flex-start", height: smallIconsHeight}}>
                 <Image width={100} height={100} src="/techIcons/npm.png" alt="firebase" style={{maxHeight: "100%", maxWidth: "100px", height: "auto", width: "auto", marginRight: "5px"}} />
                 <Image width={100} height={100} src="/techIcons/rollup.png" alt="react.js" style={{maxHeight: "100%", maxWidth: "100px", height: "auto", width: "auto", marginRight: "5px"}} />
