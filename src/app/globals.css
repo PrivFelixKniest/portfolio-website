@@ -292,7 +292,7 @@ div.hover-underline-animation:hover::after {
 }
 
 img {
-  filter: grayscale(95%);
+  filter: grayscale(70%);
   transition: .3s filter linear;
 }
 
