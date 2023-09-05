@@ -2,6 +2,7 @@ import React from "react"
 import { Box } from "@mui/material";
 import { H1Header } from "../components/H1Header";
 import { TechnologyCard } from "../components/TechnologyCard";
+import Image from "next/image";
 
 export const CareerSection: React.FC<any> = () => {
 
@@ -53,7 +54,7 @@ export const CareerSection: React.FC<any> = () => {
             <Box className="gridItem">
               <h2>Primary Technologies</h2>
               <Box sx={{display: "flex", justifyContent: "center"}}>
-                <Box sx={{backgroundColor: "#131313", margin: "20px 0", padding: "10px", position: "relative"}}>
+                <Box sx={{backgroundColor: "#131313", margin: "20px 0", padding: "20px", position: "relative"}}>
                   {/* box corners */}
                   <Box sx={{position: "absolute", top: "0", left: "0", overflow: "hidden", height: "50px", width: "50px"}}>
                     <Box sx={{transform: "rotate(45deg) translate(-90%, 0)", height: "200%", width: "100%", backgroundColor: "#202020"}} />
@@ -61,7 +62,24 @@ export const CareerSection: React.FC<any> = () => {
                   <Box sx={{position: "absolute", bottom: "0", right: "0", overflow: "hidden", height: "50px", width: "50px"}}>
                     <Box sx={{transform: "rotate(225deg) translate(-22%, 0)", height: "200%", width: "100%", backgroundColor: "#202020"}} />
                   </Box>
-                  <TechnologyCard images={["/techIcons/js.png","/techIcons/htmlcssjs.png","/techIcons/redux.png"]} image={"/techIcons/pngwing.png"} title="React.js" text="Designing and developing artistic dashboards and functional company platforms with React.js." />
+                  {/** Arrow Decal */}
+                  <Box className="arrowDecalBig" sx={{position: "absolute", top: "30%", right: "-10%"}}>
+                    <Box sx={{display: "flex", flexDirection: "column", justifyContent: "space-between", height: "100px"}}>
+                      <Image src="/decals/Slice3.png" width={60} height={40} alt="arrow" style={{transform: "rotate(200deg)"}}/>
+                      <Image src="/decals/Slice2.png" width={50} height={50} alt="arrow" style={{transform: "rotate(240deg)"}}/>
+                    </Box>
+                    <p className="daniel" style={{position: "absolute", right: "-40px", bottom: "38%", width: "60px"}}>Hover</p>
+                  </Box>
+                  <Box className="arrowDecalSmall" sx={{position: "absolute", top: "48%", right: "-10%", transform: "translateY(-50%)"}}>
+                    <Box sx={{display: "flex", flexDirection: "column", justifyContent: "space-between", height: "100px"}}>
+                      <Image src="/decals/Slice3.png" width={60} height={40} alt="arrow" style={{transform: "rotate(200deg)"}}/>
+                      <Image src="/decals/Slice2.png" width={50} height={50} alt="arrow" style={{transform: "rotate(240deg)"}}/>
+                    </Box>
+                    <p className="daniel" style={{position: "absolute", right: "-40px", bottom: "38%", width: "60px"}}>Tap</p>
+                  </Box>
+                  <Box sx={{ marginBottom: "40px"}}>
+                    <TechnologyCard images={["/techIcons/js.png","/techIcons/htmlcssjs.png","/techIcons/redux.png"]} image={"/techIcons/pngwing.png"} title="React.js" text="Designing and developing artistic dashboards and functional company platforms with React.js." />
+                  </Box>
                   <TechnologyCard 
                   images={["/techIcons/fastapi.png","/techIcons/aws.png","/techIcons/pytest.png",]} 
                   image={"/techIcons/kisspng-python-high-level-programming-language-language-5abd4cc1374351.5140760915223553932264.png"} 

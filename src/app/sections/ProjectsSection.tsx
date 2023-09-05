@@ -18,7 +18,14 @@ export const ProjectsSection: React.FC<any> = () => {
               <Image width={600} height={600} src="/decals/creativityproductivityLarge.png" alt="decal" className="rotateDecal" style={{width: "200px", height: "200px"}} />
             </Box>
           </Box>
-          <H1Header title="Projects" />
+          <Box sx={{position: "relative"}}>
+            <H1Header title="Projects"/>
+            {/** Arrow Decal */}
+            <Box className="arrowDecalBig" sx={{position: "absolute", top: "0", left: "-40px"}}>
+              <Image src="/decals/Slice2.png" width={40} height={40} alt="arrow" style={{transform: "rotate(67deg)"}}/>
+              <p className="daniel" style={{position: "absolute", right: "-60px", bottom: "-125px", transform: "rotate(-84deg)", width: "230px"}}>Some of my Projects ...</p>
+            </Box>
+          </Box>
           <Box className="flexCollapse" sx={{display: "flex", width: "100%", justifyContent: "space-between", marginBottom: "30px"}}>
             <Box className="gridItem">
               <ImageCarousel images={["/projects/scanrecs/3.jpg","/projects/scanrecs/4.jpg","/projects/scanrecs/scanrecsToDash.gif","/projects/scanrecs/1.jpg", "/projects/scanrecs/2.jpg","/projects/scanrecs/scanrecsAddNew.gif"]} />

@@ -12,7 +12,7 @@ export const AboutMeSection: React.FC<any> = () => {
           <Box className="flexCollapse" sx={{display: "flex", justifyContent: "space-between"}}>
             <Box className="gridItem">
               <Image src={"/portrait-slim.png"} width={1000} height={400} style={{width: "100%",height: "auto"}} alt="portrait" />
-              <p style={{fontSize: "12px", fontStyle: "italic", textAlign: "right"}}>Photo by Anton Buddeberg: Me in front of the &quot;Honsellbrücke&quot; - Frankfurt</p>
+              <p className="daniel" style={{fontSize: "13px", textAlign: "right"}}>Photo by Anton Buddeberg: Me in front of the &quot;Honsellbrücke&quot; - Frankfurt</p>
             </Box>
             <Box className="gridItem" sx={{display: "flex", flexDirection: "column", justifyContent: "center"}}>
               <p>I grew up in Frankfurt, Germany and quickly stumbled over game development as a child.

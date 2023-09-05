@@ -323,6 +323,10 @@ img:hover {
 
 }
 
+.arrowDecalSmall {
+  display: none;
+}
+
 .careerPadding {
   padding-right: 30px;
 }
@@ -426,6 +430,9 @@ img:hover {
   }
   .arrowDecalBig {
     display: none;
+  }
+  .arrowDecalSmall {
+    display: block;
   }
 }
 

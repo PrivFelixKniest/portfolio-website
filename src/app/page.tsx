@@ -149,7 +149,7 @@ export default function Home() {
                     </Box>
                     {/** Arrow Decal */}
                     <Box className="arrowDecalBig" sx={{position: "absolute", bottom: "-120px", left: "20px"}}>
-                      <Image src="/decals/slice1.png" height={100} width={100} alt="Arrow" style={{transform: "rotate(210deg"}}/>
+                      <Image src="/decals/Slice1.png" height={100} width={100} alt="Arrow" style={{transform: "rotate(210deg"}}/>
                       <Box sx={{position: "absolute", top: "30%", right: "-70px"}}>
                         <p className="daniel"> Hover Here</p>
                       </Box>
@@ -180,8 +180,13 @@ export default function Home() {
                       </Box>
                     </Box>
                   </Box>
-                  <Box className="flexCollapse" sx={{display: "flex", marginTop: "10px"}}>
+                  <Box className="flexCollapse" sx={{display: "flex", marginTop: "10px", position: "relative"}}>
                     <Box className="responsiveLine" sx={{height: "100%", width: "2px", borderRadius: "1px", backgroundColor: "white", marginRight: "5px"}} />
+                    {/** Arrow Decal */}
+                    <Box className="arrowDecalBig" sx={{position: "absolute", top: "-35%", left: "10%"}}>
+                      <Image src="/decals/Slice2.png" width={40} height={40} alt="arrow" style={{transform: "rotate(150deg)"}}/>
+                      <p className="daniel" style={{position: "absolute", left: "-100px", top: "-10px"}}> Click Here</p>
+                    </Box>
                     {renderLinkTree()}
                   </Box>
                 </Box>
@@ -192,7 +197,7 @@ export default function Home() {
       </Box>
     )
   }
-
+  
   return (
     <Box>
       {renderHeader()}

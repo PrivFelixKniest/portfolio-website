@@ -36,13 +36,13 @@ export const TechnologyCard: React.FC<TechnologyCardProps> = ({image, title, tex
 
   return (
     <Box className="technologyCardCollapse" sx={{display: "flex"}} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
-      <Image width={800} height={800} alt="technology icon" className="techBigIcon" src={image} style={{height: "200px", width: "200px", marginRight: "10px"}} />
-      <Box sx={{position: "relative", width: "200px", overflow: "hidden", height: "200px"}} >
+      <Image width={800} height={800} alt="technology icon" className="techBigIcon" src={image} style={{height: "160px", width: "160px", marginRight: "10px"}} />
+      <Box sx={{position: "relative", width: "160px", overflow: "hidden", height: "160px"}} >
         <Box sx={{position: "absolute", top: "0", left: "0", display: "flex", flexDirection: "column", justifyContent: "center", height: "100%"}}>
           <h3 style={{marginBottom: "10px", transform: `translateX(${openTitlePos}px)`, transition: "transform .5s ease-in-out"}}>{title}</h3>
           <p style={{transform: `translateX(${openTextPos}px)`, transition: "transform .5s ease-in-out"}}>{text}</p>
         </Box>
-        <Box sx={{position: "absolute", top: "0", left: "0", display: "flex", flexDirection: "column", justifyContent: "center", height: "200px"}}>
+        <Box sx={{position: "absolute", top: "0", left: "0", display: "flex", flexDirection: "column", justifyContent: "center", height: "160px"}}>
           {images?.map(image => {
             imageKey += 1
             return (
