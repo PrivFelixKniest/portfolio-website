@@ -13,7 +13,7 @@ export const ProjectsSection: React.FC<any> = () => {
     <Box id="projects" className="section" >
       <Box className="alignContent">
         <Box className="contentContainer" >
-          <Box sx={{position: "absolute", top: "230px", right: "0", overflow: "hidden"}}>
+          <Box sx={{position: "absolute", top: "180px", right: "0", overflow: "hidden"}}>
             <Box sx={{transform: "translateX(60%)"}}>
               <Image width={600} height={600} src="/decals/creativityproductivityLarge.png" alt="decal" className="rotateDecal" style={{width: "200px", height: "200px"}} />
             </Box>

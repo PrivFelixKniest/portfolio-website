@@ -107,7 +107,7 @@ li {
 /*Normal Styles*/
 
 .section {
-  padding-top: 50px;
+  padding-top: 100px;
   padding-bottom: 100px;
   overflow-x: hidden;
 }
@@ -422,5 +422,24 @@ img:hover {
     flex-direction: column;
     margin-left: 5vw;
     margin-right: 5vw;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+  h2 {
+    font-size: 1.1em;
+  }
+  h3 {
+    font-size: 0.95em;
+  }
+  h4 {
+    font-size: 0.9em;
+  }
+  p, ul, ol, a {
+    font-size: 0.85em;
+  }
+  .contentContainer {
+    margin: 0 20px
   }
 }
