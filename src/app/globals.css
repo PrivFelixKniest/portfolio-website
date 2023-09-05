@@ -8,6 +8,11 @@
   src: url("./resources/fonts/Alice-Regular.woff");
 }
 
+@font-face {
+  font-family: "Daniel";
+  src: url("./resources/fonts/daniel.woff2");
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 7px;
@@ -50,6 +55,10 @@ body {
 }
 h1, h2, h3, h4 {
   font-family: "Capuche";
+}
+.daniel {
+  font-family: "Daniel";
+  font-size: 1.2em;
 }
 
 li {
@@ -414,6 +423,9 @@ img:hover {
 
   .careerPadding {
     padding-right: 0px;
+  }
+  .arrowDecalBig {
+    display: none;
   }
 }
 

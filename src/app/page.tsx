@@ -3,7 +3,6 @@
 import { Box } from "@mui/material";
 import KeyboardArrowDownRoundedIcon from '@mui/icons-material/KeyboardArrowDownRounded';
 import { useEffect, useState } from "react";
-import { TechnologiesSection } from "./sections/TechnologiesSection";
 import { handleIdScroll } from "./utils/scroll";
 import { ProjectsSection } from "./sections/ProjectsSection";
 import { CareerSection } from "./sections/CareerSection";
@@ -148,7 +147,13 @@ export default function Home() {
                     <Box className="mainHeading">
                       <span className="highlightedText hover-underline-animation">Beautiful UI</span> and <span className="highlightedText hover-underline-animation">effective applications</span> are my passion.
                     </Box>
-                  
+                    {/** Arrow Decal */}
+                    <Box className="arrowDecalBig" sx={{position: "absolute", bottom: "-120px", left: "20px"}}>
+                      <Image src="/decals/slice1.png" height={100} width={100} alt="Arrow" style={{transform: "rotate(210deg"}}/>
+                      <Box sx={{position: "absolute", top: "30%", right: "-70px"}}>
+                        <p className="daniel"> Hover Here</p>
+                      </Box>
+                    </Box>
                     <Box className="subHeading">
                       <b className="highlightWhite" onMouseEnter={handleMouseEnterName} onMouseLeave={handleMouseLeaveName}>Felix Kniest</b> - Full Stack Developer
                     </Box>
