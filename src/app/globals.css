@@ -149,10 +149,19 @@ a {
   text-decoration: none;
   transition: all .2s linear;
   cursor: url('./resources/cursor/click.png') 3 3, auto;
+  color: #cbdde4;
 }
 
 a:hover {
-  color: #cbdde4
+  color: #a3e3fa
+}
+
+.navLink {
+  color: white;
+}
+
+.navLink:hover {
+  color: #cbdde4;
 }
 
 .h1HeaderLine {
@@ -276,6 +285,18 @@ div.hover-underline-animation:hover::after {
   100% {
     transform: rotate(360deg)
   }
+}
+
+.skillLevel {
+  color: rgba(255,255,255,.8);
+  font-family: "Daniel";
+  transition: color .1s linear;
+  margin-left: 12px;
+  white-space: nowrap;
+}
+.skillLevel:hover {
+  color: rgba(255,255,255,1);
+  font-family: "Daniel";
 }
 
 .gridItem {

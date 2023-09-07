@@ -32,20 +32,31 @@ export const CareerSection: React.FC<any> = () => {
           <Box className="flexCollapse" sx={{display: "flex", justifyContent: "space-between" }}>
             <Box className="gridItem careerPadding" >
               <Box sx={{height: "100%",display: "flex", flexDirection: "column", justifyContent: "center"}}>
-                <h2 style={{marginBottom: "15px"}}>Career Path</h2>
+                <Box sx={{display: "flex",marginBottom: "15px"}}>
+                  <h2>Career Path</h2>
+                  <Box sx={{width: "15px"}} />
+                  <Box sx={{height: "100%", display: "flex", flexDirection: "column", justifyContent: "center"}}>
+                    <a href="https://www.linkedin.com/in/felix-kniest-837b3a235/" rel="norefferer" target="_blank">LinkedIn (German)</a>
+                  </Box>
+                </Box>
                 <Box sx={{display: "flex", justifyContent:"flex-start", position: "relative", marginBottom: "30px"}}>
-                  {renderCareerPoint("2014-2022 | Gymnasium, Abitur", "Carl Schurz Schule Frankfurt (1,0 / 4.0 US-4.0-GPA) ")}
+                  {renderCareerPoint("2014-2022 | Gymnasium, Abitur", "Carl Schurz Schule Frankfurt (1,0 / 4.0 US-4.0-GPA)")}
+                  {renderCareerPoint("2022 | e-fellows Scholarship", "Rewarded for special results on the Abitur")}
                   {renderCareerPoint("2022-2025 | Computer Science B.Sc.", "Berufsakademie Rhein Main (Ongoing average grade: 96.5%)")}
                   {renderCareerPoint("2022-2025 | Full Stack Developer", "creditshelf AG")}
                   <Box sx={{ height: `${(careerPoint)*carrerPointSpacer-carrerPointSpacer*0.61}px`, width: "3px", borderRadius: "2px", backgroundColor: "#C6BA9C", margin: "0 10px"}} />
                 </Box>
-                <h2 style={{marginBottom: "10px"}}>Technologies I have used</h2>
+                <h2 style={{marginBottom: "10px"}}>Technologies and Skills</h2>
                 <ul style={{marginLeft: "20px"}}>
-                  <li><b>AWS: </b>ECR Repositories, RDS Databases, EC2 Deployment, SSM Environment management</li>
-                  <li><b>Data Bases: </b>MySQL, PostgreSQL, Firestore (NoSQL)</li>
-                  <li><b>Node.js: </b>Express.js Backend</li>
-                  <li><b>Java: </b>Object Oriented Programming and principles</li>
-                  <li><b>Flutter: </b>App Development in Dart</li>
+                  <li><b>Python: </b><a href="https://www.freecodecamp.org/certification/felixkniest/data-analysis-with-python-v7" rel="norefferer" target="_blank">Data Science</a> and Backend Development<span className="skillLevel">Medium/High</span></li>
+                  <li><b>React.js: </b>Websites, Business Frontends and Web-Dashboards<span className="skillLevel">Medium/High</span></li>
+                  <li><b>Data Bases: </b>MySQL, PostgreSQL, Firestore (NoSQL)<span className="skillLevel">Medium/High</span></li>
+                  <li><b>Software Architecture: </b>Conceptualising Software and developing Solutions<span className="skillLevel">Medium</span></li>
+                  <li><b>AWS: </b>ECR Repositories, RDS Databases, EC2 Deployment, SSM Environment management<span className="skillLevel">Medium</span></li>
+                  <li><b>Java: </b>Object Oriented Programming and principles<span className="skillLevel">Medium</span></li>
+                  <li><b>Docker: </b>Containerisation and Container Deployment<span className="skillLevel">Basic/Medium</span></li>
+                  <li><b>Express.js: </b>Node Backend<span className="skillLevel">Basic</span></li>
+                  <li><b>Flutter: </b>App Development in Dart<span className="skillLevel">Basic</span></li>
                   {/** TODO: add expertise level and maybe icons */}
                 </ul>
               </Box>

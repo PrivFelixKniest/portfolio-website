@@ -81,9 +81,9 @@ export default function Home() {
   function renderLinkTree() {
     return (
       <Box sx={{ display: "flex", flexDirection: "column", justifyContent: "center"}}>
-        <a onClick={e => handleIdScroll("projects")} className="headerLinkListItem" id="item2">Projects</a>
-        <a onClick={e => handleIdScroll("career")} className="headerLinkListItem" id="item3">Carreer & Experience</a>
-        <a onClick={e => handleIdScroll("aboutme")} className="headerLinkListItem" id="item4">About Me</a>
+        <a onClick={e => handleIdScroll("projects")} className="headerLinkListItem navLink" id="item2">Projects</a>
+        <a onClick={e => handleIdScroll("career")} className="headerLinkListItem navLink" id="item3">Carreer & Experience</a>
+        <a onClick={e => handleIdScroll("aboutme")} className="headerLinkListItem navLink" id="item4">About Me</a>
       </Box>)
   }
 
@@ -142,16 +142,23 @@ export default function Home() {
             
             <Box sx={{height: "100%", display: "flex", flexDirection: "column", justifyContent: "center"}}>
               <Box className="loadHeaderAnimation" >
-                <Box className="flexCollapse mouse" sx={{display: "flex"}}>
+                <Box className="flexCollapse mouse" sx={{display: "flex", position: "relative"}}>
                   <Box sx={{marginRight: "20px"}}>
                     <Box className="mainHeading">
                       <span className="highlightedText hover-underline-animation">Beautiful UI</span> and <span className="highlightedText hover-underline-animation">effective applications</span> are my passion.
                     </Box>
-                    {/** Arrow Decal */}
+                    {/** Arrow Decal Big */}
                     <Box className="arrowDecalBig" sx={{position: "absolute", bottom: "-120px", left: "20px"}}>
                       <Image src="/decals/Slice1.png" height={100} width={100} alt="Arrow" style={{transform: "rotate(210deg"}}/>
                       <Box sx={{position: "absolute", top: "30%", right: "-70px"}}>
                         <p className="daniel"> Hover Here</p>
+                      </Box>
+                    </Box>
+                    {/** Arrow Decal Small */}
+                    <Box className="arrowDecalSmall" sx={{position: "absolute", bottom: "-90px", left: "20px"}}>
+                      <Image src="/decals/Slice1.png" height={70} width={70} alt="Arrow" style={{transform: "rotate(210deg"}}/>
+                      <Box sx={{position: "absolute", top: "25%", right: "-70px"}}>
+                        <p className="daniel">Tap Here</p>
                       </Box>
                     </Box>
                     <Box className="subHeading">
@@ -182,7 +189,7 @@ export default function Home() {
                   </Box>
                   <Box className="flexCollapse" sx={{display: "flex", marginTop: "10px", position: "relative"}}>
                     <Box className="responsiveLine" sx={{height: "100%", width: "2px", borderRadius: "1px", backgroundColor: "white", marginRight: "5px"}} />
-                    {/** Arrow Decal */}
+                    {/** Arrow Decal Big */}
                     <Box className="arrowDecalBig" sx={{position: "absolute", top: "-35%", left: "10%"}}>
                       <Image src="/decals/Slice2.png" width={40} height={40} alt="arrow" style={{transform: "rotate(150deg)"}}/>
                       <p className="daniel" style={{position: "absolute", left: "-100px", top: "-10px"}}> Click Here</p>
