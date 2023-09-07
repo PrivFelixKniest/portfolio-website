@@ -22,6 +22,8 @@ export const AboutMeSection: React.FC<any> = () => {
                 <br />
                 <br />
                 Today, I enjoy analyzing problems and developing solutions. I love conceptualising systems, finding real life applications for my skillset and seeing a project come to life piece by piece.
+                <br />
+                Next to my interest in software, I also enjoy utilising music and art as a creative outlet.
               </p>
             </Box>
             
