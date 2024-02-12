@@ -59,6 +59,23 @@ h3,
 h4 {
   font-family: "Capuche";
 }
+
+.prim-button {
+  background-color: transparent;
+  border: 1px solid white;
+  padding: 3px 5px;
+  font-family: Alice;
+  color: white;
+  transition: all 0.2s ease;
+  font-size: 14px;
+}
+
+.prim-button:hover {
+  background-color: #c6ba9c;
+  color: #131313;
+  border: 1px solid #c6ba9c;
+}
+
 .daniel {
   font-family: "Daniel";
   font-size: 1.2em;
@@ -332,6 +349,10 @@ div.hover-underline-animation:hover::after {
   }
 }
 
+.projectNumber {
+  font-family: Daniel;
+}
+
 .skillLevel {
   color: rgba(255, 255, 255, 0.8);
   font-family: "Daniel";
@@ -435,6 +456,16 @@ img:hover {
 .headerLinkListItem#item4 {
   animation-play-state: paused;
   animation-delay: calc(calc(var(--scroll) - 0.2) * -1s);
+}
+
+.flexCollapse,
+.flexCollapseReverse {
+  margin-bottom: 70px;
+}
+
+.flexCollapse .noMargin,
+.flexCollapseReverse .noMargin {
+  margin-bottom: 0px;
 }
 
 @keyframes moveright {

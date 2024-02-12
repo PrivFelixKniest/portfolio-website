@@ -114,7 +114,7 @@ export default function Home() {
         <a
           onClick={(e) => handleIdScroll("aboutme")}
           className="headerLinkListItem navLink"
-          id="item4"
+          id="item3"
         >
           About Me
         </a>
@@ -125,6 +125,7 @@ export default function Home() {
   const renderPageContent = () => {
     return (
       <>
+        <Box sx={{ height: "70px" }} />
         <ProjectsSection />
         <AboutMeSection />
       </>
@@ -226,7 +227,7 @@ export default function Home() {
             >
               <Box className="loadHeaderAnimation">
                 <Box
-                  className="flexCollapse mouse"
+                  className="flexCollapse mouse noMargin"
                   sx={{ display: "flex", position: "relative" }}
                 >
                   <Box sx={{ marginRight: "20px" }}>
@@ -338,7 +339,7 @@ export default function Home() {
                     </Box>
                   </Box>
                   <Box
-                    className="flexCollapse"
+                    className="flexCollapse noMargin"
                     sx={{
                       display: "flex",
                       marginTop: "10px",

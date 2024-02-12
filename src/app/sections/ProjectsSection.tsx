@@ -58,13 +58,13 @@ export const ProjectsSection: React.FC<any> = () => {
             </Box>
           </Box>
           {/** WAILL */}
+          <h1 className="projectNumber">1.</h1>
           <Box
             className="flexCollapse"
             sx={{
               display: "flex",
               width: "100%",
               justifyContent: "space-between",
-              marginBottom: "30px",
             }}
           >
             <Box className="gridItem">
@@ -196,13 +196,13 @@ export const ProjectsSection: React.FC<any> = () => {
             </Box>
           </Box>
           {/** SCANRECS ADMIN */}
+          <h1 className="projectNumber">2.</h1>
           <Box
             className="flexCollapseReverse"
             sx={{
               display: "flex",
               width: "100%",
               justifyContent: "space-between",
-              marginBottom: "30px",
             }}
           >
             <Box
@@ -311,13 +311,13 @@ export const ProjectsSection: React.FC<any> = () => {
             </Box>
           </Box>
           {/** SCANRECS ARTIST DASHBOARD */}
+          <h1 className="projectNumber">3.</h1>
           <Box
             className="flexCollapse"
             sx={{
               display: "flex",
               width: "100%",
               justifyContent: "space-between",
-              marginBottom: "30px",
             }}
           >
             <Box className="gridItem">
@@ -455,13 +455,13 @@ export const ProjectsSection: React.FC<any> = () => {
             </Box>
           </Box>
           {/** COVID PREDICTIONS */}
+          <h1 className="projectNumber">4.</h1>
           <Box
             className="flexCollapseReverse"
             sx={{
               display: "flex",
               width: "100%",
               justifyContent: "space-between",
-              marginBottom: "30px",
             }}
           >
             <Box
@@ -591,13 +591,13 @@ export const ProjectsSection: React.FC<any> = () => {
             </Box>
           </Box>
           {/** SWIPING HEADER */}
+          <h1 className="projectNumber">5.</h1>
           <Box
             className="flexCollapse"
             sx={{
               display: "flex",
               width: "100%",
               justifyContent: "space-between",
-              marginTop: "30px",
             }}
           >
             <Box className="gridItem">
