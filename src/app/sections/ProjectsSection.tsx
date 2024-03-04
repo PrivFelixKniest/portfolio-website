@@ -89,7 +89,11 @@ export const ProjectsSection: React.FC<any> = () => {
                 Waill is a web service for document information exctraction
                 currently based on OpenAI beta API features. Sign up on Waill
                 and OpenAI and start asking your documents questions to gain
-                insights faster.
+                insights faster. <br />
+                <span style={{ opacity: 0.6 }}>
+                  (After logging in, loadtimes of the platform might be a bit
+                  longer than expected due to server coldstarts.)
+                </span>
               </p>
               <Box
                 sx={{
@@ -192,6 +196,14 @@ export const ProjectsSection: React.FC<any> = () => {
                 >
                   waill.net
                 </a>
+                <a
+                  href="https://github.com/PrivFelixKniest/waill"
+                  style={{ marginRight: "10px" }}
+                  target="_blank"
+                  rel="no-referrer"
+                >
+                  Github
+                </a>
               </Box>
             </Box>
           </Box>
@@ -214,14 +226,27 @@ export const ProjectsSection: React.FC<any> = () => {
               }}
             >
               {/** Text */}
-              <h2 style={{ marginBottom: "10px" }}>Scan Admin Platform</h2>
+              <h2 style={{ marginBottom: "10px" }}>
+                Scan Admin Platform / labeltrackr.
+              </h2>
               <p style={{ marginBottom: "10px" }}>
                 In order to simplify the operation of Scan Records, an
                 indipendent music label for electronic music, I developed the
                 Scan Admin Platform, a Next.JS web application that collects,
                 stores and manages artist and release data, allowing artists to
                 add information to their own releases and submit songs
-                independently.
+                independently. <br />
+                I&apos;m currently working on generalising the Admin Platform as
+                a standalone SaaS product &quot;labeltrackr&quot; (Not open to
+                the public yet). Visit{" "}
+                <a
+                  href="https://labeltrackr.com"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  labeltrackr.com
+                </a>{" "}
+                for more Information.
               </p>
               {/** Technologies */}
               <Box
