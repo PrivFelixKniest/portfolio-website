@@ -92,7 +92,7 @@ export const AboutMeSection: React.FC<any> = () => {
               </p>
             </Box>
           </Box>
-          <p style={{ marginBottom: "4px" }}>
+          <p style={{ marginBottom: "24px" }}>
             After my Abitur at &quot;Carl Schurz Schule Frankfurt&quot; in 2022
             (Grade 1.0 or 4.0/4 GPA | Majors in Maths and Chemistry), I started
             studying Applied Computer Science in a cooperative study program
@@ -100,7 +100,8 @@ export const AboutMeSection: React.FC<any> = () => {
             96.3% avg) and will recieve my Bachelors of Science in 2025. The
             cooperative study program allows me to work full time at creditshelf
             AG for 6 months out of the year next to my 6 months of full time
-            studies. For more information see my LinkedIn page linked below.
+            studies. For more information see my LinkedIn page linked below or
+            contact me at contact@felixkniest.com.
           </p>
           <Box
             sx={{
